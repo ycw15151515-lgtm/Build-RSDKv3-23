@@ -13,7 +13,7 @@ option(RETRO_ORIGINAL_CODE "Removes any change that differs from the original co
 set(RETRO_SDL_VERSION 2 CACHE STRING "select between SDL2 and SDL1, defaults to SDL2")
 
 if(RETRO_ORIGINAL_CODE)
-    set(RETRO_MOD_LOADER OFF)
+    set(RETRO_MOD_LOADER ON)
 endif()
 
 set(RETRO_NAME "RSDKv3")
@@ -175,7 +175,7 @@ endif()
 
 
 target_compile_definitions(RetroEngine PRIVATE
-    RETRO_USE_MOD_LOADER=$<BOOL:${RETRO_MOD_LOADER}>
+    RETRO_USE_MOD_LOADER=1$<BOOL:${RETRO_MOD_LOADER}>
     RETRO_USING_OPENGL=$<BOOL:${RETRO_USE_HW_RENDER}>
     RETRO_USE_SDL${RETRO_SDL_VERSION}=1
     FORCE_CASE_INSENSITIVE=$<BOOL:${RETRO_FORCE_CASE_INSENSITIVE}>
