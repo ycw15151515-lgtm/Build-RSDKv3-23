@@ -11,7 +11,7 @@
 #endif
 
 #ifndef RETRO_USE_MOD_LOADER
-#define RETRO_USE_MOD_LOADER (!RETRO_USE_ORIGINAL_CODE && 1)
+#define RETRO_USE_MOD_LOADER (1)
 #endif
 
 // Forces all DLC flags to be disabled, this should be enabled in any public releases
